@@ -1,0 +1,10 @@
+export const bikes = [
+    {
+        'id': 'dc-batman',
+        'superhero': 'Batman',
+        'publisher': 'DC Comics',
+        'alter_ego': 'Bruce Wayne',
+        'first_appearance': 'Detective Comics #27',
+        'characters': 'Bruce Wayne'
+    }
+]
