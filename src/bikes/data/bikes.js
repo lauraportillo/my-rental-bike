@@ -2,48 +2,48 @@ export const bikes = [
     {
         'id': 'electric-capri-berlin-black',
         'type': 'Electric',
-        'name': 'Capri berlin black'
+        'bike': 'Capri berlin black'
     },
     {
         'id': 'electric-capri-berlin-cream',
         'type': 'Electric',
-        'name': 'Capri berlin cream'
+        'bike': 'Capri berlin cream'
     },
     {
         'id': 'electric-capri-metz-black',
         'type': 'Electric',
-        'name': 'Capri metz black'
+        'bike': 'Capri metz black'
     },
     {
         'id': 'road-troy-black',
         'type': 'Road',
-        'name': 'Troy black'
+        'bike': 'Troy black'
     },
     {
         'id': 'road-troy-highland-gray',
         'type': 'Road',
-        'name': 'Troy highland gray'
+        'bike': 'Troy highland gray'
     },
     {
         'id': 'road-troy-windsor-blue',
         'type': 'Road',
-        'name': 'Troy windsor blue'
+        'bike': 'Troy windsor blue'
     },
 
     {
         'id': 'city-capri-carolina-pink',
         'type': 'City',
-        'name': 'Capri carolina pink'
+        'bike': 'Capri carolina pink'
     },
     {
         'id': 'city-capri-gracia-cream',
         'type': 'City',
-        'name': 'Capri gracia cream'
+        'bike': 'Capri gracia cream'
     },
     {
         'id': 'city-capri-valentina-aquamarina',
         'type': 'City',
-        'name': 'Capri valentina aquamarina'
+        'bike': 'Capri valentina aquamarina'
     },
 
 
