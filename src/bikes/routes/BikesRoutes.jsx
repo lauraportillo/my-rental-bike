@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { Navbar } from '../../ui';
-import { CityPage, ElectricPage, SearchPage, RoadPage, BikePage } from '../pages';
+import { CityPage, ElectricPage, SearchPage, RoadPage } from '../pages';
 
 export const BikesRoutes = () => {
   return (
@@ -14,7 +14,7 @@ export const BikesRoutes = () => {
           <Route path="city" element={<CityPage />} />
 
           <Route path="search" element={<SearchPage />} />
-          <Route path="bike/:id" element={<BikePage />} />
+          {/* <Route path="bike/:id" element={<BikePage />} /> */}
 
           <Route path="/" element={<Navigate to="/electric" />} />
         </Routes>
