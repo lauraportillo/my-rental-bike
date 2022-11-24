@@ -4,7 +4,7 @@ export const BikeCard = ({ id, type, bike_name }) => {
   const bikeImageUrl = `./assets/bikes/${id}.jpg`;
 
   return (
-    <div className="card-deck animate__animated animate__fadeIn">
+    <div className="card-deck animate__animated animate__fadeIn p-2">
       <div className="card">
         <img src={bikeImageUrl} className="card-img-top p-3" alt={bike_name} />
 
