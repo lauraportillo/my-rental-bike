@@ -41,9 +41,9 @@ export const bikes = [
         'bike': 'Capri gracia cream'
     },
     {
-        'id': 'city-capri-valentina-aquamarina',
+        'id': 'city-capri-aquamarina',
         'type': 'City',
-        'bike': 'Capri valentina aquamarina'
+        'bike': 'Capri aquamarina'
     },
 
 

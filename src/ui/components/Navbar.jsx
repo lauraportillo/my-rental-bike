@@ -8,7 +8,7 @@ export const Navbar = () => {
         My rental bike
       </Link>
 
-      <div className="navbar-collapse">
+      <div className="navbar-collapse p-2">
         <div className="navbar-nav">
           <NavLink className={({ isActive }) => `nav-item nav-link ${isActive ? 'active' : ''}`} to="/electric">
             Electric
