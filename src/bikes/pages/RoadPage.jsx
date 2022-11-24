@@ -1,5 +1,11 @@
-import React from 'react';
+import { BikeList } from '../components';
 
 export const RoadPage = () => {
-  return <div>RoadPage</div>;
+  return (
+    <>
+      <h1>Road Bikes</h1>
+
+      <BikeList type="Road" />
+    </>
+  );
 };
