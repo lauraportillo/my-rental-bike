@@ -5,6 +5,8 @@ import { useForm } from '../../hooks/useForm';
 import { BikeCard } from '../components';
 import { getBikesByName } from '../helpers';
 
+import './searchPage.scss';
+
 export const SearchPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -48,7 +50,7 @@ export const SearchPage = () => {
               onChange={onInputChange}
             />
 
-            <button className="btn btn-outline-primary mt-2">Search</button>
+            <button className="btn btn-outline-dark mt-2 searchBtn_custom">Search</button>
           </form>
         </div>
 
@@ -57,7 +59,7 @@ export const SearchPage = () => {
           <hr />
 
           <div
-            className="alert alert-primary animate__animated animate__fadeIn"
+            className="alert alert-dark animate__animated animate__fadeIn"
             style={{ display: showSearch ? '' : 'none' }}
           >
             Search a bike
