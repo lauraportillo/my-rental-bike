@@ -1,4 +1,5 @@
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import './bikeCard.scss';
 
 export const BikeCard = ({ id, type, bike_name }) => {
   const bikeImageUrl = `./assets/bikes/${id}.jpg`;
@@ -12,7 +13,9 @@ export const BikeCard = ({ id, type, bike_name }) => {
           <h5 className="card-title">{bike_name}</h5>
           <p className="card-text">{type}</p>
 
-          {/* <Link to={`/hero/${id}`}>More...</Link> */}
+          <Link to={`/bike/${id}`} className="bikeCard_about">
+            More info...
+          </Link>
         </div>
       </div>
     </div>
