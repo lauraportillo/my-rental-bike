@@ -1,11 +1,17 @@
 
 .searchBtn_custom{
-    color: #9fd5d1;
     border: solid #9fd5d1 1px;
+    color: #9fd5d1;
 }
 
 .searchBtn_custom:hover{
-    border: solid #9fd5d1 1px;
     background-color: #9fd5d1;
+    border: solid #9fd5d1 1px;
     color:white;
+}
+
+.searchAlert_custom{
+    background-color: rgba(159, 213, 209, 0.4);
+    border: solid #9fd5d1 1px;
+    color: #3a847e;
 }

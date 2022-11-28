@@ -50,7 +50,7 @@ export const SearchPage = () => {
               onChange={onInputChange}
             />
 
-            <button className="btn btn-outline-dark mt-2 searchBtn_custom">Search</button>
+            <button className="btn mt-2 searchBtn_custom">Search</button>
           </form>
         </div>
 
@@ -59,7 +59,7 @@ export const SearchPage = () => {
           <hr />
 
           <div
-            className="alert alert-dark animate__animated animate__fadeIn"
+            className="alert searchAlert_custom animate__animated animate__fadeIn"
             style={{ display: showSearch ? '' : 'none' }}
           >
             Search a bike
