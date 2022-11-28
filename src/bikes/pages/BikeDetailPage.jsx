@@ -1,6 +1,7 @@
 import { useMemo } from 'react';
 import { Navigate, useParams, useNavigate } from 'react-router-dom';
 import { getBikeById } from '../helpers';
+import './bikeDetailPage.scss';
 
 export const BikeDetailPage = () => {
   const { id } = useParams();
@@ -19,37 +20,13 @@ export const BikeDetailPage = () => {
   }
 
   return (
-    // <div className="row mt-5">
-    //   <div className="col-8">
-    //     <img src={bikeImageUrl} alt={bike.bibe_name} className="img-thumbnail animate__animated animate__fadeInLeft" />
-    //   </div>
-
-    //   <div className="col-8">
-    //     <h3>{bike.bike_name}</h3>
-
-    //     <ul className="list-group list-group-flush">
-    //       <li className="list-group-item">
-    //         <b>Type:</b> {bike.type}
-    //       </li>
-    //       <li className="list-group-item">
-    //         <b>Description:</b> {bike.description}
-    //       </li>
-    //     </ul>
-
-    //     <button onClick={onNavigateBack} className="btn btn-outline-primary">
-    //       Back
-    //     </button>
-    //   </div>
-    // </div>
-
-    // PRUEBA:
     <div className="d-flex flex-column align-items-center mt-5">
       <div className="col-8">
         <img src={bikeImageUrl} alt={bike.bibe_name} className="img-fluid animate__animated animate__fadeInLeft" />
       </div>
 
       <div className="col-8 mt-2">
-        <h3>{bike.bike_name}</h3>
+        <h3 className="detailTitle">{bike.bike_name}</h3>
 
         <ul className="list-group-flush p-0">
           <li className="list-group-item mb-2">
@@ -60,9 +37,12 @@ export const BikeDetailPage = () => {
           </li>
         </ul>
 
-        <button onClick={onNavigateBack} className="btn btn-outline-primary">
-          Back
-        </button>
+        <div>
+          <button onClick={onNavigateBack} className="btn detailBtn_custom m-1">
+            Back
+          </button>
+          <button className="btn detailBtn_custom m-1">Rent</button>
+        </div>
       </div>
     </div>
   );
