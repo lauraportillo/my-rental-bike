@@ -1,5 +1,11 @@
-import React from 'react';
+import { Navbar } from '../../ui';
 
 export const RentPage = () => {
-  return <div>RentPage</div>;
+  return (
+    <>
+      <Navbar />
+
+      <div className="container">RENT PAGE</div>
+    </>
+  );
 };
