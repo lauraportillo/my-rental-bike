@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 
-import { RentingPage } from '../auth';
+import { RentingPage } from '../auth/pages/RentingPage';
 import { BikesRoutes } from '../bikes';
 
 export const AppRouter = () => {

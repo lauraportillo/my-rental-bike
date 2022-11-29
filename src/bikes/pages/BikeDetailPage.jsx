@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
-import { Navigate, useParams, useNavigate } from 'react-router-dom';
+import { Navigate, useParams, useNavigate, Link } from 'react-router-dom';
+
 import { getBikeById } from '../helpers';
 import './bikeDetailPage.scss';
 
@@ -53,7 +54,10 @@ export const BikeDetailPage = () => {
           <button onClick={onNavigateBack} className="btn detailBtn_custom m-1">
             Back
           </button>
-          <button className="btn detailBtn_custom m-1">Rent</button>
+
+          <Link to="/renting">
+            <button className="btn detailBtn_custom m-1">Rent</button>
+          </Link>
         </div>
       </div>
     </div>

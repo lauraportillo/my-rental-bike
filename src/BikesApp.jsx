@@ -1,11 +1,10 @@
 //Components
-import { BikesRoutes } from './bikes/routes/BikesRoutes';
-
+import { AppRouter } from './router/AppRouter';
 
 export const BikesApp = () => {
   return (
     <>
-      <BikesRoutes />
+      <AppRouter />
     </>
   );
 };
