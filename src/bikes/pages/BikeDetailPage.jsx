@@ -33,7 +33,13 @@ export const BikeDetailPage = () => {
             <b>Type:</b> {bike.type}
           </li>
           <li className="list-group-item mb-2">
-            <b>Description:</b> {bike.description}
+            <b>Features:</b> {bike.features}
+          </li>
+          <li className="list-group-item mb-2">
+            <b>Price:</b>
+          </li>
+          <li className="list-group-item mb-2">
+            <b>Conditions:</b>
           </li>
         </ul>
 
