@@ -55,7 +55,7 @@ export const BikeDetailPage = () => {
             Back
           </button>
 
-          <Link to="/renting">
+          <Link to="/rent">
             <button className="btn detailBtn_custom m-1">Rent</button>
           </Link>
         </div>

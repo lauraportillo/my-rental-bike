@@ -1,13 +1,13 @@
 import { Route, Routes } from 'react-router-dom';
 
-import { RentingPage } from '../auth/pages/RentingPage';
+import { RentPage } from '../auth/pages/RentPage';
 import { BikesRoutes } from '../bikes';
 
 export const AppRouter = () => {
   return (
     <>
       <Routes>
-        <Route path="renting" element={<RentingPage />} />
+        <Route path="rent" element={<RentPage />} />
 
         <Route path="/*" element={<BikesRoutes />} />
       </Routes>
