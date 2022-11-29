@@ -36,7 +36,7 @@ export const BikeDetailPage = () => {
             <b>Features:</b> {bike.features}
           </li>
           <li className="list-group-item mb-2">
-            <b>Price:</b>
+            <b>Price per day:</b>
           </li>
           <li className="list-group-item mb-2">
             <b>Conditions:</b>
