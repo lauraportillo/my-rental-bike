@@ -5,7 +5,9 @@ export const RentPage = () => {
     <>
       <Navbar />
 
-      <div className="container">RENT PAGE</div>
+      <div className="container">
+        <h1 className="mt-3 mb-3">Rent your bike</h1>
+      </div>
     </>
   );
 };
