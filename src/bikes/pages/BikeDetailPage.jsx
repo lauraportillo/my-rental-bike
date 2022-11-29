@@ -36,14 +36,20 @@ export const BikeDetailPage = () => {
             <b>Features:</b> {bike.features}
           </li>
           <li className="list-group-item mb-2">
-            <b>Price per day:</b>
+            <b>Price per day:</b> {bike.price}
+            <b>*</b>
           </li>
           <li className="list-group-item mb-2">
-            <b>Conditions:</b>
+            <b>Conditions:</b> {bike.conditions}
           </li>
         </ul>
 
-        <div>
+        <small className="detailSmall">
+          <b>*</b>The base price is USD 10 per day, if the request is made before the 15th of each month and 12 USD per
+          day is made on the 15th or the following days.
+        </small>
+
+        <div className="mt-4">
           <button onClick={onNavigateBack} className="btn detailBtn_custom m-1">
             Back
           </button>

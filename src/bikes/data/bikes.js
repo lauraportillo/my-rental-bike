@@ -5,7 +5,7 @@ export const bikes = [
         'bike_name': 'Capri berlin black',
         'features': 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam incidunt veritatis doloribus similique, ab illo quia nisi eos! Quam repellendus incidunt hic repudiandae libero, earum sunt odit assumenda dolor fuga?',
         'price': '10-12$',
-        'conditions': 'Minimum number of days to rent this bike is 1 day'
+        'conditions': 'Minimum number of days to rent this bike is 1 day.'
     },
     {
         'id': 'electric-capri-berlin-cream',
@@ -13,14 +13,14 @@ export const bikes = [
         'bike_name': 'Capri berlin cream',
         'features': 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam incidunt veritatis doloribus similique, ab illo quia nisi eos! Quam repellendus incidunt hic repudiandae libero, earum sunt odit assumenda dolor fuga?',
         'price': '10-12$',
-        'conditions': 'Minimum number of days to rent this bike is 1 day'
+        'conditions': 'Minimum number of days to rent this bike is 1 day.'
     },
     {
         'id': 'electric-capri-metz-black',
         'type': 'Electric',
         'bike_name': 'Capri metz black',
         'features': 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam incidunt veritatis doloribus similique, ab illo quia nisi eos! Quam repellendus incidunt hic repudiandae libero, earum sunt odit assumenda dolor fuga?', 'price': '10-12$',
-        'conditions': 'Minimum number of days to rent this bike is 1 day'
+        'conditions': 'Minimum number of days to rent this bike is 1 day.'
     },
     {
         'id': 'road-troy-black',
