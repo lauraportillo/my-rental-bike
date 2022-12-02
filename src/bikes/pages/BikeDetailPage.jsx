@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useMemo } from 'react';
 import { Navigate, useParams, useNavigate, Link } from 'react-router-dom';
 
@@ -9,6 +10,9 @@ export const BikeDetailPage = () => {
   const navigate = useNavigate();
 
   const bike = useMemo(() => getBikeById(id), [id]);
+
+  const [selectedBike] = useState(bike);
+  console.log(selectedBike);
 
   const onNavigateBack = () => {
     navigate(-1);
@@ -55,7 +59,7 @@ export const BikeDetailPage = () => {
             Back
           </button>
 
-          <Link to="/rent">
+          <Link to={'/rent'} state={selectedBike}>
             <button className="btn detailBtn_custom m-1">Rent</button>
           </Link>
         </div>

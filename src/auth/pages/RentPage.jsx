@@ -1,8 +1,12 @@
 import { useForm } from '../../hooks/useForm';
 import { Navbar } from '../../ui';
+import { useLocation } from 'react-router-dom';
 
-export const RentPage = () => {
+export const RentPage = ({ selectedBike }) => {
   const { displayName, email, telephone, onInputChange } = useForm();
+
+  const location = useLocation();
+  console.log(location);
 
   const onSearchSubmit = (ev) => {
     ev.preventDefault();
