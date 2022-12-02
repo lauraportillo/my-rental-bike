@@ -1,23 +1,32 @@
+import { useLocation } from 'react-router-dom';
 import { useForm } from '../../hooks/useForm';
 import { Navbar } from '../../ui';
-import { useLocation } from 'react-router-dom';
 
-export const RentPage = ({ selectedBike }) => {
+import './rentPage.scss';
+
+export const RentPage = () => {
   const { displayName, email, telephone, onInputChange } = useForm();
 
   const location = useLocation();
-  console.log(location);
 
   const onSearchSubmit = (ev) => {
     ev.preventDefault();
   };
+
+  const bikeImageUrl = `./assets/bikes/${location.state.id}.jpg`;
 
   return (
     <>
       <Navbar />
 
       <div className="container">
-        <h1 className="mt-3 mb-3">Rent your bike</h1>
+        <h1 className="mt-3 mb-3">Rent your bike:</h1>
+
+        <h5 className="rentPageTitle">Selected Bike: {location.state.bike_name}</h5>
+
+        <div className="col-4">
+          <img src={bikeImageUrl} alt={location.state.bibe_name} className="img-fluid" />
+        </div>
 
         <form onSubmit={onSearchSubmit} className="col-6">
           <div className="form-group">

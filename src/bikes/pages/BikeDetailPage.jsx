@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import { Navigate, useParams, useNavigate, Link } from 'react-router-dom';
 
 import { getBikeById } from '../helpers';
@@ -12,7 +11,6 @@ export const BikeDetailPage = () => {
   const bike = useMemo(() => getBikeById(id), [id]);
 
   const [selectedBike] = useState(bike);
-  console.log(selectedBike);
 
   const onNavigateBack = () => {
     navigate(-1);
@@ -59,6 +57,7 @@ export const BikeDetailPage = () => {
             Back
           </button>
 
+          {/* IMPORTANTE: ha cambiado la forma de pasar el estado a través del link con React Router V6 */}
           <Link to={'/rent'} state={selectedBike}>
             <button className="btn detailBtn_custom m-1">Rent</button>
           </Link>
