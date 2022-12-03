@@ -19,16 +19,16 @@ export const RentPage = () => {
     <>
       <Navbar />
 
-      <div className="container">
+      <div className="container col-6">
         <h1 className="mt-3 mb-3">Rent your bike:</h1>
-
-        <h5 className="rentPageTitle">Selected Bike: {location.state.bike_name}</h5>
-
-        <div className="col-4">
-          <img src={bikeImageUrl} alt={location.state.bibe_name} className="img-fluid" />
+        <div className="d-flex flex-column align-items-center justify-content-center p-4 ">
+          <div>
+            <img src={bikeImageUrl} alt={location.state.bibe_name} className="img-fluid" />
+          </div>
+          <small className="rentPageTitle">{location.state.bike_name}</small>
         </div>
 
-        <form onSubmit={onSearchSubmit} className="col-6">
+        <form onSubmit={onSearchSubmit}>
           <div className="form-group">
             <label htmlFor="displayName">Full name</label>
             <input
