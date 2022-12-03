@@ -19,7 +19,7 @@ export const RentPage = () => {
     <>
       <Navbar />
 
-      <div className="container col-6">
+      <div className="container col-8">
         <h1 className="mt-3 mb-3">Rent your bike:</h1>
         <div className="d-flex flex-column align-items-center justify-content-center p-4 ">
           <div>
