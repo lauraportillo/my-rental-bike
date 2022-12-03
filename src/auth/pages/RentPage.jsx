@@ -13,7 +13,26 @@ export const RentPage = () => {
     ev.preventDefault();
   };
 
-  const bikeImageUrl = `./assets/bikes/${location.state.id}.jpg`;
+
+
+  const renderSelectedBike = () => {
+    if (location.state === null) {
+      return (
+        <div>
+          <h1>Selecciona tu bici</h1>
+        </div>
+      );
+    } else {
+      return (
+        <div className="d-flex flex-column align-items-center justify-content-center p-4 ">
+          <div>
+            <img src={`./assets/bikes/${location.state.id}.jpg`} alt={location.state.bibe_name} className="img-fluid" />
+          </div>
+          <small className="rentPageTitle">{location.state.bike_name}</small>
+        </div>
+      );
+    }
+  };
 
   return (
     <>
@@ -21,12 +40,7 @@ export const RentPage = () => {
 
       <div className="container col-8">
         <h1 className="mt-3 mb-3">Rent your bike:</h1>
-        <div className="d-flex flex-column align-items-center justify-content-center p-4 ">
-          <div>
-            <img src={bikeImageUrl} alt={location.state.bibe_name} className="img-fluid" />
-          </div>
-          <small className="rentPageTitle">{location.state.bike_name}</small>
-        </div>
+        {renderSelectedBike()}
 
         <form onSubmit={onSearchSubmit}>
           <div className="form-group">
