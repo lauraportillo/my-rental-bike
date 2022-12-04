@@ -1,7 +1,7 @@
 import { useLocation } from 'react-router-dom';
 import { useForm } from '../../hooks/useForm';
 import { Navbar } from '../../ui';
-
+import { bikes } from '../../bikes/data/bikes';
 import './rentPage.scss';
 
 export const RentPage = () => {
@@ -13,13 +13,22 @@ export const RentPage = () => {
     ev.preventDefault();
   };
 
-
-
   const renderSelectedBike = () => {
+    const handleChange = (event) => {
+      console.log(event.target.value);
+    };
+
     if (location.state === null) {
       return (
         <div>
-          <h1>Selecciona tu bici</h1>
+          <select name="bikes" id="bike-select" onChange={handleChange}>
+            <option value="allBikes">Select a bike</option>
+            {bikes.map((option) => (
+              <option key={option.bike_name} value={option.bike_name}>
+                {option.type}-{option.bike_name}
+              </option>
+            ))}
+          </select>
         </div>
       );
     } else {
