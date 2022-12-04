@@ -20,8 +20,8 @@ export const RentPage = () => {
 
     if (location.state === null) {
       return (
-        <div className="form-group">
-          <select name="bikes" id="bikeSelet" onChange={handleChange} className="form-select">
+        <div className="form-group mt-4">
+          <select name="bikes" id="bikeSelet" onChange={handleChange} className="form-select mb-2">
             <option value="allBikes">Choose a bike</option>
             {bikes.map((option) => (
               <option key={option.bike_name} value={option.bike_name}>
