@@ -8,14 +8,14 @@ import './rentPage.scss';
 import 'react-datepicker/dist/react-datepicker.css';
 
 export const RentPage = () => {
-  const { displayName, email, telephone, onInputChange } = useForm();
+  const { displayName, email, telephone, numberDays, onInputChange } = useForm();
 
   const [selectedDate, setSelectedDate] = useState();
   // BORRAR
   console.log(selectedDate);
 
   // BORRAR
-  // let selectedDay = selectedDate.getDay();
+  // const selectedDay = selectedDate.getDate();
   // console.log(selectedDay);
 
   const location = useLocation();
@@ -110,6 +110,19 @@ export const RentPage = () => {
               dateFormat="dd/MM/yyyy"
               minDate={new Date()}
               className="form-control mt-1 mb-2"
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="numberDays">How many days do you need the bike?</label>
+            <input
+              type="number"
+              placeholder="number of days"
+              name="numberDays"
+              value={numberDays}
+              onChange={onInputChange}
+              className="form-control mt-1 mb-2"
+              autoComplete="off"
             />
           </div>
         </form>
