@@ -14,6 +14,10 @@ export const RentPage = () => {
   // BORRAR
   console.log(selectedDate);
 
+  // BORRAR
+  // let selectedDay = selectedDate.getDay();
+  // console.log(selectedDay);
+
   const location = useLocation();
 
   const onSearchSubmit = (ev) => {
