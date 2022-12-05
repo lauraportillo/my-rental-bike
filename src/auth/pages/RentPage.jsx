@@ -1,11 +1,16 @@
+import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import DatePicker from 'react-datepicker';
 import { useForm } from '../../hooks/useForm';
 import { Navbar } from '../../ui';
 import { bikes } from '../../bikes/data/bikes';
 import './rentPage.scss';
+import 'react-datepicker/dist/react-datepicker.css';
 
 export const RentPage = () => {
   const { displayName, email, telephone, onInputChange } = useForm();
+
+  const [selectedDate, setSelectedDate] = useState();
 
   const location = useLocation();
 
@@ -89,6 +94,10 @@ export const RentPage = () => {
               className="form-control mt-1 mb-2"
               autoComplete="off"
             />
+          </div>
+
+          <div>
+            <DatePicker selected={selectedDate} onChange={(date) => setSelectedDate(date)} />
           </div>
         </form>
       </div>
