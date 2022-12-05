@@ -48,7 +48,7 @@ export const RentPage = () => {
       <Navbar />
 
       <div className="container col-8">
-        <h1 className="mt-3 mb-3">Rent your bike:</h1>
+        <h1 className="mt-3 mb-3 rentPageTitle">Rent your bike:</h1>
         {renderSelectedBike()}
 
         <form onSubmit={onSearchSubmit}>
