@@ -11,6 +11,8 @@ export const RentPage = () => {
   const { displayName, email, telephone, onInputChange } = useForm();
 
   const [selectedDate, setSelectedDate] = useState();
+  // BORRAR
+  console.log(selectedDate);
 
   const location = useLocation();
 
@@ -97,7 +99,14 @@ export const RentPage = () => {
           </div>
 
           <div>
-            <DatePicker selected={selectedDate} onChange={(date) => setSelectedDate(date)} />
+            <label>Choose first renting day</label>
+            <DatePicker
+              selected={selectedDate}
+              onChange={(date) => setSelectedDate(date)}
+              dateFormat="dd/MM/yyyy"
+              minDate={new Date()}
+              className="form-control mt-1 mb-2"
+            />
           </div>
         </form>
       </div>
