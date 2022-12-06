@@ -1,13 +1,12 @@
-// import { useState } from 'react';
+import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-// import DatePicker from 'react-datepicker';
+import DatePicker from 'react-datepicker';
 import { useForm } from '../../hooks/useForm';
 import { Navbar } from '../../ui';
 import { bikes } from '../../bikes/data/bikes';
 import './rentPage.scss';
 import 'react-datepicker/dist/react-datepicker.css';
 
-// VER CÓMO CONTROLAR LOS INPUTS COMO DICE LA CONSOLA
 const formData = {
   displayName: '',
   email: '',
@@ -18,13 +17,11 @@ const formData = {
 export const RentPage = () => {
   const { displayName, email, telephone, numberDays, onInputChange } = useForm(formData);
 
-  // const [selectedDate, setSelectedDate] = useState();
-  // // BORRAR
-  // console.log(selectedDate);
+  const [selectedDate, setSelectedDate] = useState();
 
-  // // BORRAR
-  // // const selectedDay = selectedDate.getDate();
-  // // console.log(selectedDay);
+  // BORRAR
+  // const selectedDay = selectedDate.getDate();
+  // console.log(selectedDay);
 
   const location = useLocation();
 
@@ -110,7 +107,7 @@ export const RentPage = () => {
             />
           </div>
 
-          {/* <div>
+          <div>
             <label>Choose first renting day</label>
             <DatePicker
               selected={selectedDate}
@@ -119,7 +116,7 @@ export const RentPage = () => {
               minDate={new Date()}
               className="form-control mt-1 mb-2"
             />
-          </div> */}
+          </div>
 
           <div className="form-group">
             <label htmlFor="numberDays">How many days do you need the bike?</label>
