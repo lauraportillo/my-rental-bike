@@ -25,7 +25,7 @@ export const RentPage = () => {
 
   const location = useLocation();
 
-  const onSearchSubmit = (ev) => {
+  const onRentSubmit = (ev) => {
     ev.preventDefault();
   };
 
@@ -67,7 +67,7 @@ export const RentPage = () => {
         <h1 className="mt-3 mb-3 rentPageTitle">Rent your bike:</h1>
         {renderSelectedBike()}
 
-        <form onSubmit={onSearchSubmit}>
+        <form onSubmit={onRentSubmit}>
           <div className="form-group">
             <label htmlFor="displayName">Full name</label>
             <input
@@ -130,6 +130,8 @@ export const RentPage = () => {
               autoComplete="off"
             />
           </div>
+
+          <button className="btn btn-primary rentBtn_custom mt-2">Rent bike</button>
         </form>
       </div>
     </>
