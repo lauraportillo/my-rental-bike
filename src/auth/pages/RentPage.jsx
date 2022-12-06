@@ -16,7 +16,7 @@ const formData = {
 
 export const RentPage = () => {
   //QUITAR DE AQUI basePrice
-  const { displayName, email, telephone, numberDays, onInputChange } = useForm(formData);
+  const { displayName, email, telephone, numberDays, basePrice, onInputChange } = useForm(formData);
 
   const basePriceDolar = () => {
     if (selectedDate) {
@@ -146,9 +146,9 @@ export const RentPage = () => {
             <label htmlFor="basePrice">Base price*</label>
             <input
               type="text"
-              placeholder="$"
+              placeholder={basePriceDolar()}
               name="basePrice"
-              value={basePriceDolar()}
+              value={basePrice}
               onChange={onInputChange}
               className="form-control mt-1 mb-2"
               autoComplete="off"
