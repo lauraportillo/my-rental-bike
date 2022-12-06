@@ -15,7 +15,18 @@ const formData = {
 };
 
 export const RentPage = () => {
+  //QUITAR DE AQUI basePrice
   const { displayName, email, telephone, numberDays, onInputChange } = useForm(formData);
+
+  const basePriceDolar = () => {
+    if (selectedDate) {
+      if (selectedDate.getDate() < 15) {
+        return 10;
+      } else {
+        return 12;
+      }
+    }
+  };
 
   const [selectedDate, setSelectedDate] = useState();
 
@@ -129,6 +140,24 @@ export const RentPage = () => {
               className="form-control mt-1 mb-2"
               autoComplete="off"
             />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="basePrice">Base price*</label>
+            <input
+              type="text"
+              placeholder="$"
+              name="basePrice"
+              value={basePriceDolar()}
+              onChange={onInputChange}
+              className="form-control mt-1 mb-2"
+              autoComplete="off"
+              readOnly
+            />
+            <small className="rentSmall">
+              <b>*</b>The base price is USD 10 per day, if the request is made before the 15th of each month and 12 USD
+              per day is made on the 15th or the following days.
+            </small>
           </div>
 
           <button className="btn btn-primary rentBtn_custom mt-2">Rent bike</button>
