@@ -15,8 +15,10 @@ const formData = {
 };
 
 export const RentPage = () => {
-  //QUITAR DE AQUI basePrice
+
   const { displayName, email, telephone, numberDays, basePrice, onInputChange } = useForm(formData);
+
+  const [selectedDate, setSelectedDate] = useState();
 
   const basePriceDolar = () => {
     if (selectedDate) {
@@ -27,12 +29,6 @@ export const RentPage = () => {
       }
     }
   };
-
-  const [selectedDate, setSelectedDate] = useState();
-
-  // BORRAR
-  // const selectedDay = selectedDate.getDate();
-  // console.log(selectedDay);
 
   const location = useLocation();
 
