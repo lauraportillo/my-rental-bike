@@ -16,7 +16,7 @@ const formData = {
 
 export const RentPage = () => {
 
-  const { displayName, email, telephone, numberDays, basePrice, onInputChange } = useForm(formData);
+  const { displayName, email, telephone, numberDays, basePrice, totalPrice, onInputChange } = useForm(formData);
 
   const [selectedDate, setSelectedDate] = useState();
 
@@ -150,13 +150,30 @@ export const RentPage = () => {
               autoComplete="off"
               readOnly
             />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="totalPrice">Total price</label>
+            <input
+              type="text"
+              // placeholder={totalPriceDolar()}
+              name="totalPrice"
+              value={totalPrice}
+              onChange={onInputChange}
+              className="form-control mt-1 mb-2"
+              autoComplete="off"
+              readOnly
+            />
+          </div>
+
+          <div className="form-group">
             <small className="rentSmall">
               <b>*</b>The base price is USD 10 per day, if the request is made before the 15th of each month and 12 USD
               per day is made on the 15th or the following days.
             </small>
           </div>
 
-          <button className="btn btn-primary rentBtn_custom mt-2">Rent bike</button>
+          <button className="btn btn-primary rentBtn_custom mt-3">Rent bike</button>
         </form>
       </div>
     </>
