@@ -16,8 +16,12 @@ const formData = {
 
 export const RentPage = () => {
   const { displayName, email, telephone, numberDays, basePrice, totalPrice, onInputChange } = useForm(formData);
-
   const [selectedDate, setSelectedDate] = useState();
+  const location = useLocation();
+
+  // console.log(bikes);
+  // const bike = bikes.map((bike) => bike);
+  // console.log(bike);
 
   const basePriceDolar = () => {
     if (selectedDate) {
@@ -30,14 +34,24 @@ export const RentPage = () => {
   };
 
   const numberDaysInteger = numberDays * 1;
-  // OPCION SÓLO PARA BICIS ELECTRICAS, DESAROLLAR EL RESTO
+  // OPCION TODAS LAS BICIS
   const totalPriceDolar = () => {
+    // aqui dentro en el scope hacer el map tipo:
+    // heroes.find(hero => hero.id === id);
+
     if (selectedDate && numberDays) {
-      return basePriceDolar() * numberDaysInteger;
+      if (location.state.type.includes('Electric')) {
+        return basePriceDolar() * numberDaysInteger;
+      }
     }
   };
 
-  const location = useLocation();
+  // // OPCION SÓLO PARA BICIS ELECTRICAS, DESAROLLAR EL RESTO
+  // const totalPriceDolar = () => {
+  //   if (selectedDate && numberDays) {
+  //     return basePriceDolar() * numberDaysInteger;
+  //   }
+  // };
 
   const onRentSubmit = (ev) => {
     ev.preventDefault();
