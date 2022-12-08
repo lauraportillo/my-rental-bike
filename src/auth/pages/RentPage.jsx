@@ -40,7 +40,9 @@ export const RentPage = () => {
       if (location?.state?.id.includes('electric') || selectBike?.includes('electric')) {
         return basePriceDolar() * numberDaysInteger;
       } else if (location?.state?.id.includes('road') || selectBike?.includes('road')) {
-        return basePriceDolar() * numberDaysInteger;
+
+        return basePriceDolar() * numberDaysInteger * 3 + basePriceDolar() * (numberDaysInteger - 3);
+        
       } else if (location?.state?.id.includes('city') || selectBike?.includes('city')) {
         return basePriceDolar() * numberDaysInteger;
       }
