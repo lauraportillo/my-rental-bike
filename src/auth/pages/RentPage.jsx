@@ -33,6 +33,7 @@ export const RentPage = () => {
       }
     }
   };
+
   const roadPriceDolar = () => {
     if (numberDaysInteger <= 3) {
       return basePriceDolar() * 3;
