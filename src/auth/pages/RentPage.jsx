@@ -20,8 +20,7 @@ export const RentPage = () => {
   const [selectBike, setSelectBike] = useState();
   const location = useLocation();
 
-  // console.log(selectBike);
-  // console.log(location?.state?.id);
+  const numberDaysInteger = numberDays * 1;
 
   const basePriceDolar = () => {
     if (selectedDate) {
@@ -32,29 +31,33 @@ export const RentPage = () => {
       }
     }
   };
+  const roadPriceDolar = () => {
+    if (numberDaysInteger <= 3) {
+      return basePriceDolar() * 3;
+    } else {
+      return basePriceDolar() * 3 + basePriceDolar() * (numberDaysInteger - 3);
+    }
+  };
 
-  const numberDaysInteger = numberDays * 1;
-  // OPCION TODAS LAS BICIS
+  const cityPriceDolar = () => {
+    if (numberDaysInteger <= 5) {
+      return basePriceDolar() * 5;
+    } else {
+      return basePriceDolar() * 5 + basePriceDolar() * (numberDaysInteger - 5);
+    }
+  };
+
   const totalPriceDolar = () => {
     if (selectedDate && numberDays) {
       if (location?.state?.id.includes('electric') || selectBike?.includes('electric')) {
         return basePriceDolar() * numberDaysInteger;
       } else if (location?.state?.id.includes('road') || selectBike?.includes('road')) {
-
-        return basePriceDolar() * numberDaysInteger * 3 + basePriceDolar() * (numberDaysInteger - 3);
-        
+        return roadPriceDolar();
       } else if (location?.state?.id.includes('city') || selectBike?.includes('city')) {
-        return basePriceDolar() * numberDaysInteger;
+        return cityPriceDolar();
       }
     }
   };
-
-  // // OPCION SÓLO PARA BICIS ELECTRICAS, DESAROLLAR EL RESTO
-  // const totalPriceDolar = () => {
-  //   if (selectedDate && numberDays) {
-  //     return basePriceDolar() * numberDaysInteger;
-  //   }
-  // };
 
   const onRentSubmit = (ev) => {
     ev.preventDefault();
