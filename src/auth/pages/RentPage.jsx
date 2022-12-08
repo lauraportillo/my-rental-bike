@@ -22,6 +22,8 @@ export const RentPage = () => {
 
   const numberDaysInteger = numberDays * 1;
 
+  const blockInvalidChar = (e) => ['e', 'E', '+', '-'].includes(e.key) && e.preventDefault();
+
   const basePriceDolar = () => {
     if (selectedDate) {
       if (selectedDate.getDate() < 15) {
@@ -163,9 +165,11 @@ export const RentPage = () => {
               placeholder="number of days"
               name="numberDays"
               value={numberDays}
+              onKeyDown={blockInvalidChar}
               onChange={onInputChange}
               className="form-control mt-1 mb-2"
               autoComplete="off"
+              min="1"
             />
           </div>
 
