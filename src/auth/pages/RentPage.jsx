@@ -17,11 +17,11 @@ const formData = {
 export const RentPage = () => {
   const { displayName, email, telephone, numberDays, basePrice, totalPrice, onInputChange } = useForm(formData);
   const [selectedDate, setSelectedDate] = useState();
+  const [selectBike, setSelectBike] = useState();
   const location = useLocation();
 
-  // console.log(bikes);
-  // const bike = bikes.map((bike) => bike);
-  // console.log(bike);
+  // console.log(selectBike);
+  // console.log(location?.state?.id);
 
   const basePriceDolar = () => {
     if (selectedDate) {
@@ -36,11 +36,12 @@ export const RentPage = () => {
   const numberDaysInteger = numberDays * 1;
   // OPCION TODAS LAS BICIS
   const totalPriceDolar = () => {
-    // aqui dentro en el scope hacer el map tipo:
-    // heroes.find(hero => hero.id === id);
-
     if (selectedDate && numberDays) {
-      if (location.state.type.includes('Electric')) {
+      if (location?.state?.id.includes('electric') || selectBike?.includes('electric')) {
+        return basePriceDolar() * numberDaysInteger;
+      } else if (location?.state?.id.includes('road') || selectBike?.includes('road')) {
+        return basePriceDolar() * numberDaysInteger;
+      } else if (location?.state?.id.includes('city') || selectBike?.includes('city')) {
         return basePriceDolar() * numberDaysInteger;
       }
     }
@@ -59,17 +60,17 @@ export const RentPage = () => {
 
   const renderSelectedBike = () => {
     const handleChange = (event) => {
-      console.log(event.target.value);
+      setSelectBike(event.target.value);
     };
 
-    if (location.state === null) {
+    if (location?.state === null) {
       return (
         <div className="form-group mt-4">
-          <select name="bikes" id="bikeSelet" onChange={handleChange} className="form-select mb-2">
-            <option value="allBikes">Choose a bike</option>
-            {bikes.map((option) => (
-              <option key={option.bike_name} value={option.bike_name}>
-                {option.type}-{option.bike_name}
+          <select name="bikes" value={selectBike} onChange={handleChange} className="form-select mb-2">
+            <option>Choose a bike</option>
+            {bikes.map((bike) => (
+              <option key={bike.id} value={bike.id}>
+                {bike.type}-{bike.bike_name}
               </option>
             ))}
           </select>
@@ -79,9 +80,13 @@ export const RentPage = () => {
       return (
         <div className="d-flex flex-column align-items-center justify-content-center p-4 ">
           <div>
-            <img src={`./assets/bikes/${location.state.id}.jpg`} alt={location.state.bike_name} className="img-fluid" />
+            <img
+              src={`./assets/bikes/${location?.state?.id}.jpg`}
+              alt={location?.state?.bike_name}
+              className="img-fluid"
+            />
           </div>
-          <small className="rentPageTitle">{location.state.bike_name}</small>
+          <small className="rentPageTitle">{location?.state?.bike_name}</small>
         </div>
       );
     }
