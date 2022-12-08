@@ -175,7 +175,7 @@ export const RentPage = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="basePrice">Base price*</label>
+            <label htmlFor="basePrice">Base price in $*</label>
             <input
               type="text"
               placeholder={basePriceDolar()}
@@ -189,7 +189,7 @@ export const RentPage = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="totalPrice">Total price</label>
+            <label htmlFor="totalPrice">Total price in $</label>
             <input
               type="text"
               placeholder={totalPriceDolar()}
