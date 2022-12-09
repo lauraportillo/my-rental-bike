@@ -23,9 +23,6 @@ Once the dependencies have been installed, you can start the project by running 
 
 This will start a local development server and open the application in your default web browser.
 
-<img src="https://github.com/lauraportillo/my-rental-bike/src/images/bike1.jpg" width="200"> <img src="https://github.com/lauraportillo/my-rental-bike/blob/master/src/images/bike1.jpg" width="200"> 
-
-<img src="https://github.com/lauraportillo/my-rental-bike/src/images/01bike820x1180.jpg" width="200"> <img src="https://github.com/lauraportillo/my-rental-bike/blob/master/src/images/01bike820x1180.jpg" width="200"> 
 
 
 
