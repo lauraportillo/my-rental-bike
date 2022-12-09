@@ -27,7 +27,7 @@ This will start a local development server and open the application in your defa
 
 <img src="https://github.com/lauraportillo/my-rental-bike/src/images/01bike820x1180.jpg" width="200"> <img src="https://github.com/lauraportillo/my-rental-bike/blob/master/src/images/01bike820x1180.jpg" width="200">  -->
 
-![electric bikes image](./assets/bikes/road-troy-black.jpg)
+![electric bikes image](https://github.com/lauraportillo/my-rental-bike/blob/master/src/images/bike1.jpg)
 
 
 ## About me
