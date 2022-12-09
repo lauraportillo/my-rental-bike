@@ -23,7 +23,10 @@ Once the dependencies have been installed, you can start the project by running 
 
 This will start a local development server and open the application in your default web browser.
 
-<!-- <img src="https://github.com/lauraportillo/shopping-list/blob/master/src/images/mobileLanding.JPG" width="200"> <img src="https://github.com/lauraportillo/shopping-list/blob/master/src/images/mobileList.JPG" width="200">  -->
+<img src="https://github.com/lauraportillo/my-rental-bike/src/images/bike1.jpg" width="200"> <img src="https://github.com/lauraportillo/my-rental-bike/blob/master/src/images/bike1.jpg" width="200"> 
+
+
+
 
 ## About me
 
