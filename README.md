@@ -24,8 +24,11 @@ Once the dependencies have been installed, you can start the project by running 
 This will start a local development server and open the application in your default web browser.
 
 
-![electric bikes image](https://github.com/lauraportillo/my-rental-bike/blob/master/src/images/bike1.jpg)
-![electric bikes image](https://github.com/lauraportillo/my-rental-bike/blob/master/src/images/bike2.jpg)
+![electric bikes](https://github.com/lauraportillo/my-rental-bike/blob/master/src/images/bike1.jpg)
+![search bikes](https://github.com/lauraportillo/my-rental-bike/blob/master/src/images/bike2.jpg)
+![detail bike](https://github.com/lauraportillo/my-rental-bike/blob/master/src/images/bike3.jpg)
+![rent form](https://github.com/lauraportillo/my-rental-bike/blob/master/src/images/bike4.jpg)
+![rent form bike](https://github.com/lauraportillo/my-rental-bike/blob/master/src/images/bike5.jpg)
 
 
 ## About me
