@@ -1,8 +1,14 @@
-# My rental Bike 🚲!
+# My rental Bike
 
-Work in progress ⛏
+Welcome to My Rental Bike, a web application built with **React.js** and CRA that allows users to rent bikes. This application has four main functionalities:
 
-Doing test with **React.JS**
+- List the available bikes in inventory
+- Search for specific bike
+- Calculate the price of rentals
+- Create a rental request
+
+
+
 
 ### 🚀🚀🚀🚀🚀
 
