@@ -76,7 +76,7 @@ My Rental Bike is built with the following technologies:
 
 The application is designed to be **responsive** using Bootstrap and is structured into different components for easy management.
 
-[Visit the website here 👉](https://lauraportillo.github.io/my-rental-bike/)
+Visit the website here:<a href="https://lauraportillo.github.io/my-rental-bike/" target="_blank">👉</a>
 
 
 ## About me
