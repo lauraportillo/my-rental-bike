@@ -42,9 +42,12 @@ In the search section, you can search for bikes according to their characteristi
 
 ## Calculating Rental Prices and Request
 
-To rent a bike, you can do it directly from the rental tab or from the details of the selected bike.
+To rent a bike, you can do it directly from the rental tab...
 
 ![rent form](https://github.com/lauraportillo/my-rental-bike/blob/master/src/images/bike4.jpg)
+
+...or from the details of the selected bike.
+
 ![rent form bike](https://github.com/lauraportillo/my-rental-bike/blob/master/src/images/bike5.jpg)
 
 
