@@ -65,14 +65,14 @@ To rent a bike, you can do it directly from the rental tab...
 
 My Rental Bike is built with the following technologies:
 
-React.js
-React-router-dom V6
-React-datepicker
-Bootstrap
-Sass
-Hooks
-Git
-GitHub Pages
+- React.js
+- React-router-dom V6
+- React-datepicker
+- Bootstrap
+- Sass
+- Hooks
+- Git
+- GitHub Pages
 
 The application is designed to be **responsive** using Bootstrap and is structured into different components for easy management.
 
