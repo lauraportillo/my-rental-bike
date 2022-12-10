@@ -46,9 +46,10 @@ The price of rentals is based on the type of bike rented and the number of renta
 
 The shop offers three types of bikes:
 
-Electric bikes: the rental cost is the base price multiplied by the number of rental days.
-Road bikes: the rental cost is the base price for the first 3 days, and the base price for each additional day.
-City bikes: the rental cost is the base price for the first 5 days, and the base price for each additional day.
+- **Electric bikes**: the rental cost is the base price multiplied by the number of rental days.
+- **Road bikes**: the rental cost is the base price for the first 3 days, and the base price for each additional day.
+- **City bikes**: the rental cost is the base price for the first 5 days, and the base price for each additional day.
+
 The base price is $10 per day if the rental request is made before the 15th of the month, and $12 per day if it is made on the 15th or later.
 
 To rent a bike, you can do it directly from the rental tab...
